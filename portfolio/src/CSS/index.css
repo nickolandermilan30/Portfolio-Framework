@@ -1,0 +1,333 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Tailwind Base Components */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Variables */
+:root {
+  --black-gradient: linear-gradient(144.39deg, #ffffff -278.56%, #f3cbcb -78.47%, #dd485a 91.61%);
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+/* Global Styles */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Text Gradients */
+.text-gradient {
+  background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #def9fa 0.89%, #edbcc9 17.23%, #f09da9 42.04%, #eb7d97 55.12%, #e65c6e 71.54%, #cf334a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Background Gradients */
+.bg-red-gradient {
+  background: linear-gradient(157.81deg, #def9fa -43.27%, #f5bec2 -21.24%, #f09d9d 12.19%, #eb7d7d 29.82%, #e65c5c 51.94%, #cf3333 90.29%);
+}
+
+.bg-black-gradient {
+  background: linear-gradient(144.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
+}
+
+.bg-black-gradient-2 {
+  background: linear-gradient(-168.39deg, #ffffff -278.56%, #6d6d6d -78.47%, #11101d 91.61%);
+}
+
+.bg-gray-gradient {
+  background: linear-gradient(153.47deg, rgba(255, 255, 255, 0) -341.94%, #14101d 95.11%);
+}
+
+.bg-discount-gradient {
+  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
+}
+
+/* Shadows */
+.box-shadow {
+  box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+/* Sidebar Animation */
+.sidebar {
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Feature Card */
+.feature-card:hover {
+  background: var(--black-gradient);
+  box-shadow: var(--card-shadow);
+}
+
+/* Feedback Card */
+.feedback-card {
+  background: transparent;
+}
+
+.feedback-card:hover {
+  background: var(--black-gradient);
+}
+
+/* Blue, Pink, and White Gradients */
+.blue__gradient {
+  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
+  filter: blur(123px);
+}
+
+.pink__gradient {
+  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  filter: blur(900px);
+}
+
+.white__gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
+}
+
+/* Footer Styles */
+
+  .footer{
+    padding: 0;
+    margin-top: 50px;
+
+  }
+  
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col-md-3 {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-heading {
+  font-size: 20px;  
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-bottom: 10px;
+}
+
+.footer-list li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #6b6b6b;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* HowItWorks|Partnerships */
+.text-red-gradient {
+  background: linear-gradient(90deg, #780a0a 35%, #ff000e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-howitworks-grey {
+  color: #667085;
+}
+
+.steps-howitworks-content {
+  margin: 4rem;
+}
+
+.steps-cards-howitworks {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 19px 15px rgba(0, 0, 0, 0.01);
+}
+
+.cards-hiw-title {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}
+
+.sub-card-hiw-title {
+  font-size: 16px;
+  color: #667085;
+  width: 18rem;
+  line-height: 180%;
+}
+
+/* LogoSlides Animation Line 1 */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide {
+  animation: slide 20s linear infinite;
+  display: flex;
+  width: calc(150px * 13 + 13 * 3.5rem);
+}
+
+.wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee {
+  display: flex;
+  width: calc(150px * 13 + 13 * 3.5rem);
+}
+
+/* LogoSlides Animation Line 2 */
+@keyframes slideReverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-reverse {
+  animation: slideReverse 20s linear infinite;
+  display: flex;
+  width: calc(150px * 12 + 12 * 3rem);
+}
+
+.wrapper-reverse {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-reverse {
+  display: flex;
+  width: calc(150px * 12 + 12 * 3rem);
+}
+
+/* ProjectHoursSupport */
+.grids {
+  margin: 0 0.8rem;
+  text-align: center;
+  width: 230px;
+}
+
+.grids-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+  background: linear-gradient(90deg, rgba(182, 126, 5, 1) 30%, rgba(241, 172, 21, 1) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grids-subtitle {
+  padding: 0.5rem 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+
+.grids-content {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 180%;
+  color: #667085;
+}
+
+/* Default Styles */
+.get-free-quotation {
+  background-color: white;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 48px;
+
+  border-radius: 20px;
+  max-width: 900px; /* Set a max-width for better control on desktop */
+  margin: auto; /* Center the element on the page */
+}
+
+.quotation-text {
+  font-size: 18px;
+  margin-right: 8px;
+  
+  color: #1E1E1E; /* Example color, adjust as necessary */
+}
+
+.free-quotation-btn {
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 50px;
+  background-color: #FFEEC9;
+  color: #B67E05;
+  transition: all 0.3s ease;
+}
+
+.free-quotation-btn:hover {
+  background-color: #B67E05;
+  color: #ffffff;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .get-free-quotation {
+    padding: 25px 15px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quotation-text {
+    font-size: 16px;
+    margin: auto; /* auto margin on mobile */
+    margin-bottom: 8px; /* Add space between text and button */
+    text-align: center; /* Center the text */
+  }
+
+  .free-quotation-btn {
+    font-size: 14px;
+      padding: 15px 1px;
+    width: 50%; /* Make the button take full width on mobile */
+    text-align: center; /* Center the text in the button */
+  }
+}
