@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom'; // Import Link
 import FrontPage from './FrontPage'; // Make sure to adjust the path if needed
 

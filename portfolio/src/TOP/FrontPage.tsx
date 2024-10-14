@@ -1,4 +1,4 @@
-import React from 'react';
+
 import ProgressBar from '../MIDDLE/ProgressBar';
 import myPicture from '../assets/Images/My Picture.jpg'; // Adjust the path accordingly
 
