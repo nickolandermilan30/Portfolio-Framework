@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import FrontPage from './FrontPage'; // Make sure to adjust the path if needed
 
 function App() {
@@ -13,10 +14,20 @@ function App() {
           </div>
 
           <ul className="flex space-x-4">
+          <li>
+              <Link to="" className="border-2 border-blue-800 text-blue-800 px-4 py-2 rounded-full hover:bg-blue-800 hover:text-white transition duration-400">
+              Experience
+              </Link>
+            </li>
             <li>
-              <button className="border-2 border-blue-800 text-blue-800 px-4 py-2 rounded-full hover:bg-blue-800 hover:text-white transition duration-400">
+              <Link to="/another-page" className="border-2 border-blue-800 text-blue-800 px-4 py-2 rounded-full hover:bg-blue-800 hover:text-white transition duration-400">
+                Drawings
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="border-2 border-blue-800 text-blue-800 px-4 py-2 rounded-full hover:bg-blue-800 hover:text-white transition duration-400">
                 About Me
-              </button>
+              </Link>
             </li>
           </ul>
         </div>
