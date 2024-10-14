@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-const TypingText = () => {
-  const text = "Front End Web Developer";
+const TypingText = ({ text }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
-  const [isTyping, setIsTyping] = useState(true); // To control cursor visibility
+  const [isTyping, setIsTyping] = useState(true);
 
   useEffect(() => {
     const typingInterval = setInterval(() => {
@@ -26,7 +25,7 @@ const TypingText = () => {
 
   return (
     <div className="flex items-center">
-      <span className="text-2xl">{displayedText}</span>
+      <span className="text-lg">{displayedText}</span>
       {isTyping && (
         <div
           className="ml-1"

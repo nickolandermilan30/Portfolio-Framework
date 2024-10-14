@@ -1,22 +1,19 @@
-
-import ProgressBar from '../MIDDLE/ProgressBar';
-import myPicture from '../assets/Images/My Picture.jpg'; // Adjust the path accordingly
+import React from 'react';
+import ProgressBar from '../MIDDLE/ProgressBar'; // Assuming ProgressBar is in the same directory
+import LandPage from '../TOP/LandPage'; // Update this path if necessary
+import SocialMedia from '../MIDDLE/Socials'; // Assuming ProgressBar is in the same directory
 
 const FrontPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      {/* Card containing the oval image, moved higher */}
-      <div className="bg-white shadow-md rounded-full p-6 mt-[-200px]"> 
-        <img
-          src={myPicture}
-          alt="Background"
-          className="rounded-full w-72 h-96 object-cover" // Oval shape
-        />
+    <div>
+      <div className="flex flex-col items-center min-h-screen px-10 pt-10"> 
+        <LandPage />
       </div>
-
-      {/* The ProgressBar is rendered below the card */}
-      <div className="mt-8 w-full">
+      <div className="flex flex-col items-start min-h-screen px-28 pt-10">
         <ProgressBar />
+      </div>
+      <div className="flex flex-col items-center min-h-screen px-10 pt-10">
+        <SocialMedia />
       </div>
     </div>
   );
