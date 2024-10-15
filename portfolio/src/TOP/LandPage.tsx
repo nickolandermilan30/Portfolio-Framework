@@ -1,5 +1,4 @@
-import React from 'react';
-import { FaUser, FaBriefcase, FaMapMarkerAlt } from 'react-icons/fa'; // Importing icons from react-icons
+import { FaUser, FaBriefcase, FaGithub } from 'react-icons/fa'; // Importing icons from react-icons
 import TypingText from '../FUNCTION/TypingText'; // Import TypingText component
 
 const LandPage = () => {
@@ -36,13 +35,13 @@ const LandPage = () => {
           </span>
         </div>
 
-        {/* Third Box with Location Icon */}
+        {/* Third Box with GitHub Icon */}
         <div className="p-3 bg-gray-200 rounded-full shadow-md w-full max-w-sm text-left flex items-center">
           <div className="bg-white rounded-full w-12 h-12 shadow-lg flex items-center justify-center">
-            <FaMapMarkerAlt className="text-2xl" style={{ color: '#FF6500' }} /> {/* Location Icon with custom color */}
+            <FaGithub className="text-2xl" style={{ color: 'black' }} /> {/* GitHub Icon with custom color */}
           </div>
           <span className="ml-4 text-xs font-semibold">
-            <TypingText text="Quezon Province" /> {/* Typing animation for Title */}
+            <TypingText text="363 Contributions" /> {/* Typing animation for Title */}
           </span>
         </div>
       </div>

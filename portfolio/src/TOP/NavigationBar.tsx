@@ -32,8 +32,6 @@ function App() {
           </ul>
         </div>
       </nav>
-      {/* Display the FrontPage component below the nav */}
-      <FrontPage />
     </div>
   );
 }

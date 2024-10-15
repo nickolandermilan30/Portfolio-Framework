@@ -43,7 +43,8 @@ const AboutUs = () => {
       { image: hotelBookingImage, name: 'Hotel Booking', link: 'https://github.com/nickolandermilan30/Hotel-Booking-Sariaya.git' },
       { image: rootFarmImage, name: 'Root Farm', link: 'https://github.com/nickolandermilan30/Crops_Detection.git' },
       { image: teyvatRestoImage, name: 'Teyvat Resto', link: 'https://github.com/nickolandermilan30/Ordering-System.git' },
-     ]);
+      { image: eunivateImage, name: 'Eunivate', link: 'https://github.com/nickolandermilan30/EUnivate.git' }, // Added for mobile filter
+    ]);
     setProjectTitle('Mobile App Projects');
   };
 
@@ -56,7 +57,7 @@ const AboutUs = () => {
     setProjectTitle('Website Projects');
   };
 
-  const handleAllClick = () => {
+   const handleAllClick = () => {
     setFilteredProjects([
       { image: bookImage, name: 'Book Project', link: 'https://github.com/nickolandermilan30/Landing_page_Books.git' },
       { image: ecommerceImage, name: 'Merch +', link: 'https://github.com/nickolandermilan30/Merch_Ecommerce_Proj.git' },

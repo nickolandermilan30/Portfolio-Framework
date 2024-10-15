@@ -7,6 +7,7 @@ import App from './TOP/Navbar';
 import AboutUs from './WORK MODE/AboutUs'; // Import AboutUs
 import './CSS/index.css';
 import './CSS/transitions.css'; // Import your custom transitions CSS
+import Socials from './WORK MODE/Service'; // Import the Socials component
 
 const Main = () => {
   const [loading, setLoading] = useState(true);
@@ -25,7 +26,8 @@ const Main = () => {
           <CSSTransition key={location.key} classNames="slide" timeout={300}>
             <Routes location={location}>
               <Route path="/" element={<App />} />
-              <Route path="/about" element={<AboutUs />} /> {/* Add route for AboutUs */}
+              <Route path="/about" element={<AboutUs />} /> 
+              <Route path="/socials" element={<Socials />} />
             </Routes>
           </CSSTransition>
         </TransitionGroup>
