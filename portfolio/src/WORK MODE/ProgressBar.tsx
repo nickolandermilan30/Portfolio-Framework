@@ -73,7 +73,7 @@ const ProgressBar = () => {
     <div className="flex flex-col items-center w-full p-4">
       {/* Title above the boxes */}
       <h2
-        className="text-5xl mb-10 font-bold text-blue-800"
+        className="text-5xl mb-10 font-bold text-red-800"
         style={{ fontFamily: '"Bebas Neue", sans-serif', fontWeight: 400 }}
       >
         MOST USED

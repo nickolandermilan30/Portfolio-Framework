@@ -4,7 +4,7 @@ import backgroundImage from '../assets/Images/background.jpg'; // Adjust the imp
 import profileImage from '../assets/Images/Profile.jpg'; // Import the profile image
 import { FaFileAlt, FaMobileAlt, FaLaptop } from 'react-icons/fa'; // Import necessary icons from react-icons
 import { AiFillMail } from 'react-icons/ai'; // Import the envelope icon from react-icons
-
+import ProgressBar from './ProgressBar'; // Assuming ProgressBar is in the same directory
 // Import the project images
 import bookImage from '../assets/Project/book.png';
 import coffeetectImage from '../assets/Project/coffeetect.png';
@@ -267,7 +267,9 @@ const AboutUs = () => {
         </div>
         
         <div className="h-20" /> 
-
+        <div className="flex flex-col items-start min-h-screen px-28 pt-10">
+        <ProgressBar />
+      </div>
       </div>
     </div>
     

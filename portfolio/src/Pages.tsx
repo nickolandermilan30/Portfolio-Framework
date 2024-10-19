@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Splashscreen from './PRELOADER/Splashscreen';
 import App from './TOP/Navbar';
-import AboutUs from './WORK MODE/AboutUs'; // Import AboutUs
+import AboutUs from './WORK MODE/AboutMe'; // Import AboutUs
 import './CSS/index.css';
 import './CSS/transitions.css'; // Import your custom transitions CSS
 import Socials from './WORK MODE/Service'; // Import the Socials component
