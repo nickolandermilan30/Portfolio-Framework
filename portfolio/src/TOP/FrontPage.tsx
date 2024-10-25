@@ -9,7 +9,7 @@ const FrontPage = () => {
       <div className="flex flex-col items-center min-h-screen px-10 pt-10"> 
         <LandPage />
       </div>
-      <div className="flex flex-col items-start px-28 pt-10">
+      <div className="flex flex-col items-center mb-10 sm:items-start px-10 sm:px-28 pt-10">
         <Media />
       </div>
       

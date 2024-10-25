@@ -4,7 +4,7 @@ import { SiTiktok } from 'react-icons/si'; // Import TikTok icon from Simple Ico
 
 const Media = () => {
   return (
-    <div className="flex justify-start space-x-4 mt-6">
+    <div className="flex justify-center md:justify-start space-x-4 mt-6">
       <a href="https://www.facebook.com/nickolander.milan/" target="_blank" rel="noopener noreferrer" className="social-icon">
         <div className="bg-blue-600 text-white p-4 rounded-full hover:bg-blue-700 transition duration-300">
           <FaFacebook size={24} />
