@@ -119,9 +119,12 @@ const AboutUs = () => {
 
       {/* Projects section */}
       <div className="flex flex-col items-center mt-16">
+
         {/* Title section */}
         <div className="w-full max-w-4xl px-4 mb-3">
-          <div className="text-black text-3xl text-center">{projectTitle}</div> {/* Dynamic project title */}
+          <div className="text-red-800 text-5xl text-center"
+          style={{ fontFamily: '"Bebas Neue", sans-serif', fontWeight: 400 }} 
+          >{projectTitle}</div> {/* Dynamic project title */}
         </div>
 
         {/* Button section */}
@@ -267,7 +270,7 @@ const AboutUs = () => {
         </div>
         
         <div className="h-20" /> 
-        <div className="flex flex-col items-start min-h-screen px-28 pt-10">
+        <div className="flex flex-col items-start px-28">
         <ProgressBar />
       </div>
       </div>
