@@ -24,8 +24,8 @@ const TypingText = ({ text }) => {
   }, [index, text]);
 
   return (
-    <div className="flex items-center">
-      <span className="text-lg">{displayedText}</span>
+    <div className="flex items-center justify-center md:justify-start md:ml-48"> {/* Add margin-left on mobile */}
+      <span className="text-3xl md:text-4xl">{displayedText}</span> {/* Adjust font size for mobile */}
       {isTyping && (
         <div
           className="ml-1"

@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Splashscreen from './PRELOADER/Splashscreen';
-import App from './TOP/Navbar';
+import App from './TOP/StartPoint';
 import AboutUs from './WORK MODE/AboutMe'; // Import AboutUs
 import './CSS/index.css';
 import './CSS/transitions.css'; // Import your custom transitions CSS

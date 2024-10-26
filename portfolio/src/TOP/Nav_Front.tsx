@@ -1,9 +1,9 @@
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link
-import FrontPage from './FrontPage'; // Make sure to adjust the path if needed
 import { FaBars, FaTimes } from 'react-icons/fa'; // Import hamburger and close icons
 
-function App() {
+function Nav_Front() {
   // State to manage the side nav visibility
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className='mt-2'>
-      <nav className="bg-white p-4">
+      <nav className=" p-4">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
             <div className="w-12 h-12 rounded-full bg-blue-800 flex items-center justify-center animate-spin">
@@ -91,11 +91,8 @@ function App() {
   </div>
 )}
 
-
-      {/* Display the FrontPage component below the nav */}
-      <FrontPage />
     </div>
   );
 }
 
-export default App;
+export default Nav_Front;
