@@ -1,0 +1,14 @@
+/* Add this to your BG.scss or your CSS file */
+.rotating-square {
+    animation: rotate 2s linear infinite; /* Rotates every 2 seconds */
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  

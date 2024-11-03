@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'; // Import Link
 function App() {
   return (
     <div className='mt-2'>
-      <nav className="bg-white p-4">
+      <nav className=" p-4">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
             <div className="w-12 h-12 rounded-full bg-blue-800 flex items-center justify-center animate-spin">

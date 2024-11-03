@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../TOP/NavigationBar'; // Adjust the path if needed
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-
+import '../SCSS/BS2.scss';
 import bookImage from '../assets/Project/book.png';
 import coffeetectImage from '../assets/Project/coffeetect.png';
 import rootFarmImage from '../assets/Project/Root Farm.jpg';
@@ -183,11 +183,9 @@ const Service = () => {
               </div>
             )}
 
-
-
-
-
           </div>
+
+
 
          
 
@@ -218,7 +216,60 @@ const Service = () => {
         </div>
       </div>
       <div className="h-10" /> 
-        
+      <div className="service-container">
+<div className="stars">
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+  <div className="star"></div>
+</div>
+</div>
 
     </div>
   );
