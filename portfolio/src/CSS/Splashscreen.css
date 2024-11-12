@@ -1,66 +1,53 @@
-.falling-hello {
-    animation: drop 1s forwards; /* Animation for dropping down */
+.splashscreen-falling {
+  display: inline-block;
+  opacity: 1;
+  animation: fallingAnimation 0.7s ease-in-out forwards; /* Faster duration */
+}
+
+.splashscreen-rising {
+  display: inline-block;
+  opacity: 1;
+  animation: risingAnimation 0.7s ease-in-out forwards; /* Faster duration */
+}
+
+/* Keyframes to ensure elements remain visible */
+@keyframes fallingAnimation {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
   }
-  
-  @keyframes drop {
-    0% {
-      transform: translateY(-50px); /* Start a bit higher */
-      opacity: 1; /* Fully opaque */
-    }
-    100% {
-      transform: translateY(0); /* End at its position */
-      opacity: 1; /* Fully opaque */
-    }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .sliding-welcome {
-    animation: slide-in-right 0.5s ease forwards; /* Faster animation for sliding in */
-    opacity: 0; /* Start with opacity 0 */
+}
+
+@keyframes risingAnimation {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
   }
-  
-  @keyframes slide-in-right {
-    0% {
-      transform: translateX(100%); /* Start from the right */
-      opacity: 0; /* Fully transparent */
-    }
-    100% {
-      transform: translateX(0); /* End at its position */
-      opacity: 1; /* Fully opaque */
-    }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  /* Existing styles for falling and rising letters */
-  .falling {
-    display: inline-block;
-    animation: fall 0.5s ease forwards; /* Animation for falling letters */
-    opacity: 0; /* Start with opacity 0 */
+}
+
+/* Initial styles for the WELCOME text */
+.sliding-welcome {
+  opacity: 0;
+  transform: translateX(-100%); /* Start from off-screen left */
+  animation: slideIn 0.7s ease-in-out forwards; /* Faster slide-in effect */
+}
+
+/* Slide-in animation for WELCOME */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
   }
-  
-  .rising {
-    display: inline-block;
-    animation: rise 0.5s ease forwards; /* Animation for rising letters */
-    opacity: 0; /* Start with opacity 0 */
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  @keyframes fall {
-    0% {
-      transform: translateY(-100vh); /* Start from above the screen */
-      opacity: 0; /* Fully transparent */
-    }
-    100% {
-      transform: translateY(0); /* End at its position */
-      opacity: 1; /* Fully opaque */
-    }
-  }
-  
-  @keyframes rise {
-    0% {
-      transform: translateY(100vh); /* Start from below the screen */
-      opacity: 0; /* Fully transparent */
-    }
-    100% {
-      transform: translateY(0); /* End at its position */
-      opacity: 1; /* Fully opaque */
-    }
-  }
-  
+}

@@ -60,8 +60,8 @@ function Nav_Front() {
               </Link>
             </li>
             <li>
-              <Link to="/another-page" className="border-2 border-blue-800 text-blue-800 px-4 py-2 rounded-full hover:bg-blue-800 hover:text-white transition duration-400">
-                Drawings
+              <Link to="/Art-page" className="border-2 border-blue-800 text-blue-800 px-4 py-2 rounded-full hover:bg-blue-800 hover:text-white transition duration-400">
+              Arts
               </Link>
             </li>
             <li className="flex items-center">
@@ -106,8 +106,8 @@ function Nav_Front() {
                 </Link>
               </li>
               <li className="w-full">
-                <Link to="/another-page" className="block border-2 border-blue-800 text-blue-800 w-full px-4 py-2 rounded-full hover:bg-blue-800 hover:text-white transition duration-400">
-                  Drawings
+                <Link to="/Art-page" className="block border-2 border-blue-800 text-blue-800 w-full px-4 py-2 rounded-full hover:bg-blue-800 hover:text-white transition duration-400">
+                  Arts
                 </Link>
               </li>
               <li className="w-full">

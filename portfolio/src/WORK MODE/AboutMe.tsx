@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import Navbar_WM from './Navbar_WM'; // Adjust the path if needed
 import backgroundImage from '../assets/Images/background.jpg'; // Adjust the import path as needed
-import profileImage from '../assets/Images/Profile.jpg'; // Import the profile image
+import profileImage from '../assets/Images/My Picture.jpg'; // Import the profile image
 import { FaFileAlt, FaMobileAlt, FaLaptop } from 'react-icons/fa'; // Import necessary icons from react-icons
 import { AiFillMail } from 'react-icons/ai'; // Import the envelope icon from react-icons
+import Info from './Information';
+import PersonalInfo from './Perosnal_Info';
+
 
 // Import the project images
 import bookImage from '../assets/Project/book.png';
@@ -29,6 +32,11 @@ const AboutUs = () => {
   const handleResumeClick = () => {
     window.open('/src/assets/Files/Nickolander Resume.pdf', '_blank'); 
   };
+
+  const handleResumeClick2 = () => {
+    window.open('/src/assets/Files/Cover letter Nicko Lander R. Milan.pdf', '_blank'); 
+  };
+
 
   const handleSetGmailClick = () => {
     const email = 'nickolandermilan30@gmail.com';
@@ -90,6 +98,15 @@ const AboutUs = () => {
             <FaFileAlt className="mr-1" />
             <span>Resume</span>
           </button>
+
+          <button
+            onClick={handleResumeClick2}
+            className="flex items-center px-3 py-1 border-2 border-yellow-500 text-yellow-500 rounded-full hover:bg-yellow-500 hover:text-white transition duration-300 text-sm"
+          >
+            <FaFileAlt className="mr-1" />
+            <span>Cover letter</span>
+          </button>
+
           <button
             onClick={handleSetGmailClick}
             className="flex items-center px-3 py-1 border-2 border-red-800 text-red-800 rounded-full hover:bg-red-800 hover:text-white transition duration-300 text-sm"
@@ -115,9 +132,17 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
+
+      <div className="flex justify-center mt-20">
+  <PersonalInfo />
+</div>
+      
+<div className="flex justify-center mt-20">
+  <Info />
+</div>
+
         <div className="h-20" /> 
         
-
 
    
       </div>

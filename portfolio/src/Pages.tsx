@@ -9,6 +9,7 @@ import './CSS/index.css';
 import './CSS/transitions.css'; // Import your custom transitions CSS
 import Socials from './WORK MODE/Service'; // Import the Socials component
 import ProjCard from './WORK MODE/ProjectCard'; // Import the Socials component
+import Art from './TOP/Art';
 
 const Main = () => {
   const [loading, setLoading] = useState(true);
@@ -30,6 +31,7 @@ const Main = () => {
               <Route path="/about" element={<AboutUs />} /> 
               <Route path="/socials" element={<Socials />} />
               <Route path="/ProjCard" element={<ProjCard />} />
+              <Route path="/Art-page" element={<Art />} />
             </Routes>
           </CSSTransition>
         </TransitionGroup>
