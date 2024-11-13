@@ -58,20 +58,7 @@ function App() {
               </Link>
             </li>
 
-            {/* Music button for desktop view */}
-            <button
-              className="w-40 h-11 border-2 bg-white shadow-xl rounded-full ml-5 flex items-center overflow-hidden hover:bg-blue-800 transition duration-300"
-              onClick={playMusic}
-            >
-              <img
-                src={MusicDisk}
-                alt="Music Disk"
-                className={`w-10 h-10 rounded-full ml-1 ${isPlaying ? 'animate-spin' : ''}`}
-              />
-              <span className="ml-2 text-blue-800 text-sm hover:text-white">
-                {isPlaying ? "Stop Now" : "Play Now"}
-              </span>
-            </button>
+           
           </ul>
         </div>
       </nav>
@@ -100,20 +87,7 @@ function App() {
                 </Link>
               </li>
 
-              {/* Music button for mobile view */}
-              <button
-                className="w-full border-2 bg-white shadow-xl rounded-full flex items-center justify-start overflow-hidden hover:bg-blue-800 transition duration-300 mt-4"
-                onClick={playMusic}
-              >
-                <img
-                  src={MusicDisk}
-                  alt="Music Disk"
-                  className={`w-10 h-10 rounded-full ml-1 ${isPlaying ? 'animate-spin' : ''}`}
-                />
-                <span className="ml-2 text-blue-800 text-sm hover:text-white">
-                  {isPlaying ? "Stop Now" : "Play Now"}
-                </span>
-              </button>
+
             </ul>
           </div>
         </div>

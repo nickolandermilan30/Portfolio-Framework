@@ -45,7 +45,7 @@ const Projects = ({ projectTitle, filteredProjects, handleMobileClick, handleCom
             href={project.link || '#'}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white rounded-lg shadow-lg p-6 w-72 h-72 flex flex-col items-center justify-between mb-4 sm:mb-0 sm:h-72 md:h-80 lg:h-72"
+            className="bg-gray-100 rounded-lg shadow-lg p-6 w-72 h-72 flex flex-col items-center justify-between mb-4 sm:mb-0 sm:h-72 md:h-80 lg:h-72"
           >
             <img
               src={project.image}
