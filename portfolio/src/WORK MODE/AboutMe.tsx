@@ -11,24 +11,13 @@ import Education from './Education';
 
 const AboutUs: React.FC = () => {
   const handleResumeClick = () => {
-    const resumeUrl = '/Nickolander Resume.pdf'; // Relative path in the public folder
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.download = 'Nickolander Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open('https://drive.google.com/drive/folders/1QuyCXcz6kiP_ZwfIiz-NxnVnVh5CezPN?usp=sharing', '_blank');
   };
 
   const handleCoverLetterClick = () => {
-    const coverLetterUrl = '/Cover letter Nicko Lander R. Milan.pdf'; // Relative path in the public folder
-    const link = document.createElement('a');
-    link.href = coverLetterUrl;
-    link.download = 'Cover letter Nicko Lander R. Milan.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open('https://drive.google.com/drive/folders/1pdNwJSISI0392v30pW-oBd7Vb9FQAhyX?usp=sharing', '_blank');
   };
+
 
   const handleSendGmailClick = () => {
     const email = 'nickolandermilan30@gmail.com';
