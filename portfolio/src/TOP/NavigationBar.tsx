@@ -1,26 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import MusicDisk from '../assets/Images/Music_Disk.png';
-import aboutYouSong from '../assets/Song/about_you_song.mp3';
 
-function App() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [audio] = useState(new Audio(aboutYouSong));
-  const [isPlaying, setIsPlaying] = useState(false);
+const App: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleSideNav = () => {
     setIsOpen(!isOpen);
-  };
-
-  const playMusic = () => {
-    if (isPlaying) {
-      audio.pause();
-      audio.currentTime = 0;
-    } else {
-      audio.play();
-    }
-    setIsPlaying(!isPlaying);
   };
 
   return (
@@ -57,8 +43,6 @@ function App() {
                 About Me
               </Link>
             </li>
-
-           
           </ul>
         </div>
       </nav>
@@ -86,14 +70,12 @@ function App() {
                   About Me
                 </Link>
               </li>
-
-
             </ul>
           </div>
         </div>
       )}
     </div>
   );
-}
+};
 
 export default App;

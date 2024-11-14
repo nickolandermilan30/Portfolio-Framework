@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import '../CSS/Splashscreen.css'; // Import the custom CSS
 
-const Splashscreen = ({ onFinishLoading }) => {
-  const [loading, setLoading] = useState(true);
-  const [showWelcome, setShowWelcome] = useState(false);
+interface SplashscreenProps {
+  onFinishLoading: () => void;
+}
+
+const Splashscreen: React.FC<SplashscreenProps> = ({ onFinishLoading }) => {
+  const [loading, setLoading] = useState<boolean>(true);
+  const [showWelcome, setShowWelcome] = useState<boolean>(false);
 
   // Simulate loading time
   useEffect(() => {
@@ -28,11 +32,11 @@ const Splashscreen = ({ onFinishLoading }) => {
           <span className="splashscreen-rising" style={{ animationDelay: '0.6s' }}>L</span>
           <span className="splashscreen-falling" style={{ animationDelay: '0.8s' }}>O</span>
         </div>
-      ) : (
+      ) : showWelcome ? (
         <div className="text-9xl text-white font-bold sliding-welcome">
           WELCOME
         </div>
-      )}
+      ) : null}
     </div>
   );
 };

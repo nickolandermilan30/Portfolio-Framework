@@ -1,10 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link
+import { Link } from 'react-router-dom';
 
-const Navbar_WM = () => {
+const Navbar_WM: React.FC = () => {
   return (
-    <div className='mt-2'>
-      <nav className=" p-4">
+    <div className="mt-2">
+      <nav className="p-4">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center">
             <div className="w-12 h-12 rounded-full bg-red-800 flex items-center justify-center animate-spin">
@@ -21,7 +20,6 @@ const Navbar_WM = () => {
                 Home
               </Link>
             </li>
-            
           </ul>
         </div>
       </nav>

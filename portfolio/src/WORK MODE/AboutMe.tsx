@@ -1,46 +1,31 @@
-import React, { useState } from 'react';
-import { FaFileAlt, FaViber, FaWhatsapp } from 'react-icons/fa';
+import React from 'react';
+import { FaFileAlt } from 'react-icons/fa';
 import { AiFillMail } from 'react-icons/ai';
-import Navbar_WM from './Navbar_WM'; 
-import backgroundImage from '../assets/Images/background.jpg'; 
-import profileImage from '../assets/Images/My Picture.jpg'; 
+import Navbar_WM from './Navbar_WM';
+import backgroundImage from '../assets/Images/background.jpg';
+import profileImage from '../assets/Images/My Picture.jpg';
 import Info from './Information';
 import PersonalInfo from './Perosnal_Info';
 import Complete from './Accomplishment';
 import Education from './Education';
 
-import bookImage from '../assets/Project/book.png';
-import coffeetectImage from '../assets/Project/coffeetect.png';
-import ecommerceImage from '../assets/Project/ecommerce2.png';
-import hotelBookingImage from '../assets/Project/Hotel Booking.png';
-import rootFarmImage from '../assets/Project/Root Farm.jpg';
-import teyvatRestoImage from '../assets/Project/teyvat resto.png';
-import eunivateImage from '../assets/Project/Eunivate.png';
-
-const AboutUs = () => {
-  const [filteredProjects, setFilteredProjects] = useState([
-    { image: coffeetectImage, name: 'Coffeetect', link: 'https://github.com/nickolandermilan30/Coffeetect.git' },
-    { image: hotelBookingImage, name: 'Hotel Booking', link: 'https://github.com/nickolandermilan30/Hotel-Booking-Sariaya.git' },
-    { image: rootFarmImage, name: 'Root Farm', link: 'https://github.com/nickolandermilan30/Crops_Detection.git' },
-    { image: teyvatRestoImage, name: 'Teyvat Resto', link: 'https://github.com/nickolandermilan30/Ordering-System.git' },
-    { image: eunivateImage, name: 'Eunivate', link: 'https://github.com/nickolandermilan30/EUnivate.git' },
-  ]);
-
-  const [projectTitle, setProjectTitle] = useState('Mobile App Projects'); 
-
+const AboutUs: React.FC = () => {
   const handleResumeClick = () => {
-    window.open('/src/assets/Files/Nickolander Resume.pdf', '_blank'); 
+    window.open('/src/assets/Files/Nickolander Resume.pdf', '_blank');
   };
 
-  const handleResumeClick2 = () => {
-    window.open('/src/assets/Files/Cover letter Nicko Lander R. Milan.pdf', '_blank'); 
+  const handleCoverLetterClick = () => {
+    window.open('/src/assets/Files/Cover letter Nicko Lander R. Milan.pdf', '_blank');
   };
 
-  const handleSetGmailClick = () => {
+  const handleSendGmailClick = () => {
     const email = 'nickolandermilan30@gmail.com';
     const subject = 'Hello';
-    const body = 'Hi there, ';
-    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank');
+    const body = 'Hi there,';
+    window.open(
+      `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
+      '_blank'
+    );
   };
 
   return (
@@ -64,14 +49,14 @@ const AboutUs = () => {
             <span>Resume</span>
           </button>
           <button
-            onClick={handleResumeClick2}
+            onClick={handleCoverLetterClick}
             className="flex items-center px-3 py-1 border-2 border-yellow-500 text-yellow-500 rounded-full hover:bg-yellow-500 hover:text-white transition duration-300 text-sm"
           >
             <FaFileAlt className="mr-1" />
             <span>Cover letter</span>
           </button>
           <button
-            onClick={handleSetGmailClick}
+            onClick={handleSendGmailClick}
             className="flex items-center px-3 py-1 border-2 border-red-800 text-red-800 rounded-full hover:bg-red-800 hover:text-white transition duration-300 text-sm"
           >
             <AiFillMail className="mr-1" />
@@ -85,15 +70,11 @@ const AboutUs = () => {
         <div className="bg-white p-4 rounded-lg shadow-lg w-full max-w-[700px] flex-1">
           <div className="text-black text-4xl mb-3 text-center md:text-left">About Me</div>
           <p className="text-gray-800 text-xl text-center md:text-left">
-            I am Nicko Lander Rosales Milan, a conscientious and dedicated 
-            IT graduate with a strong sense of responsibility and exceptional time management skills. 
-            I adapt flexibly to diverse tasks and am known for my diligent work ethic. 
-            My experience spans front-end development using tools like VS Code, MongoDB Compass, and Next.js, 
-            with a solid foundation in HTML, CSS, TypeScript, and JavaScript. 
-            Having freelanced in web and mobile applications, 
-            I bring skills in UI/UX design, SEO, and backend knowledge with Java and Python. 
-            Deeply committed to assisting your company in achieving its goals, 
-            I am confident my dedication and skills will make a meaningful, positive impact.
+            I am Nicko Lander Rosales Milan, a conscientious and dedicated IT graduate with a strong sense of responsibility and exceptional time management skills.
+            I adapt flexibly to diverse tasks and am known for my diligent work ethic.
+            My experience spans front-end development using tools like VS Code, MongoDB Compass, and Next.js, with a solid foundation in HTML, CSS, TypeScript, and JavaScript.
+            Having freelanced in web and mobile applications, I bring skills in UI/UX design, SEO, and backend knowledge with Java and Python.
+            Deeply committed to assisting your company in achieving its goals, I am confident my dedication and skills will make a meaningful, positive impact.
           </p>
         </div>
         <div className="bg-white p-2 rounded-lg shadow-lg flex-1">
@@ -109,11 +90,9 @@ const AboutUs = () => {
         <Info />
       </div>
 
-       <div className="flex justify-center mt-20">
+      <div className="flex justify-center mt-20">
         <Education />
       </div>
-
-    
 
       <div className="h-20" />
     </div>

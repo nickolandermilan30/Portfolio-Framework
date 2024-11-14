@@ -1,7 +1,4 @@
-import React from 'react';
-import { FaDownload } from 'react-icons/fa';
-
-const Information = () => {
+const Information: React.FC = () => {
   return (
     <div className="flex flex-col items-center md:flex-row md:justify-between py-12 px-6 md:px-20 bg-white space-y-10 md:space-y-0 md:space-x-10">
       {/* About Me Section */}

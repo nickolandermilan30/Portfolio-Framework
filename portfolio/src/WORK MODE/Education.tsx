@@ -1,9 +1,16 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
+interface ItemProps {
+  icon: typeof faBriefcase | typeof faGraduationCap;
+  year: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+}
+
 // Single Item Component for Experience or Education
-const Item = ({ icon, year, title, subtitle, description }) => {
+const Item: React.FC<ItemProps> = ({ icon, year, title, subtitle, description }) => {
   return (
     <div className="flex items-start space-x-4">
       <div className="flex-shrink-0 flex flex-col items-center">
@@ -25,7 +32,7 @@ const Item = ({ icon, year, title, subtitle, description }) => {
   );
 };
 
-const Education = () => {
+const Education: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <h2 className="text-4xl font-semibold text-center mb-8">Experience & Education</h2>

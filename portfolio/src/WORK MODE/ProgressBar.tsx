@@ -1,13 +1,10 @@
-import React from 'react';
 import { Pie } from 'react-chartjs-2';
-import { Chart as ChartJS, ArcElement, Tooltip } from 'chart.js';
+import { Chart as ChartJS, ArcElement, Tooltip, ChartOptions } from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
-// Register necessary components with Chart.js
 ChartJS.register(ArcElement, Tooltip, ChartDataLabels);
 
-const ProgressBar = () => {
-  // Sample data for the pie chart reflecting programming languages used
+const ProgressBar: React.FC = () => {
   const data = {
     labels: [
       'Java (57.14%)',
@@ -23,7 +20,7 @@ const ProgressBar = () => {
     datasets: [
       {
         label: 'Programming Languages',
-        data: [57.14, 28.57, 28.57, 28.57, 28.57, 14.29, 14.29, 14.29, 14.29], // Percentages
+        data: [57.14, 28.57, 28.57, 28.57, 28.57, 14.29, 14.29, 14.29, 14.29],
         backgroundColor: [
           'rgba(249, 115, 22, 0.6)', // Java
           'rgba(220, 38, 38, 0.6)',  // HTML
@@ -41,37 +38,35 @@ const ProgressBar = () => {
     ],
   };
 
-  const options = {
+  const options: ChartOptions<'pie'> = {
     responsive: true,
     plugins: {
       legend: {
-        display: false, // Hide the legend
+        display: false,
       },
       tooltip: {
         callbacks: {
           label: (context) => {
-            return `${context.label}: ${context.raw}%`; // Show percentage in tooltip
+            return `${context.label}: ${context.raw}%`;
           },
         },
       },
       datalabels: {
         color: '#fff',
-        formatter: (value) => `${value}%`, // Display percentage directly on pie slices
-        anchor: 'center', // Position labels at the center of each slice
-        align: 'end', // Aligns the text towards the outer edge of the slices
-        offset: 10, // Increase space between labels and chart (adjust as needed)
+        formatter: (value: number) => `${value}%`,
+        anchor: 'center',
+        align: 'end',
+        offset: 10,
         font: {
           weight: 'bold',
-          size: 14, // Adjust size as needed
+          size: 14,
         },
       },
     },
   };
-  
 
   return (
     <div className="flex flex-col items-center w-full p-4">
-      {/* Title above the boxes */}
       <h2
         className="text-5xl mb-10 font-bold text-red-800"
         style={{ fontFamily: '"Bebas Neue", sans-serif', fontWeight: 400 }}
@@ -80,21 +75,21 @@ const ProgressBar = () => {
       </h2>
 
       <div className="flex flex-col items-center md:flex-row justify-between w-full">
-        {/* Box 1 with Pie Chart */}
         <div className="w-96 md:w-1/2 min-h-96 rounded-lg mb-4 md:mb-0 md:mr-4 flex items-center justify-center">
-          <div className="bg-gray-100 rounded-full shadow-lg p-5"> {/* Box with rounded corners and shadow */}
-            <Pie data={data} options={options} width={300} height={300} /> {/* Pie chart */}
+          <div className="bg-gray-100 rounded-full shadow-lg p-5">
+            <Pie data={data} options={options} width={300} height={300} />
           </div>
         </div>
 
-        {/* Box 2 with Languages List */}
         <div className="w-96 md:w-1/2 bg-gray-100 min-h-40 shadow-lg rounded-lg md:mb-0 p-4">
-          <div className="flex flex-col md:flex-row flex-wrap"> {/* Adjusted flex to stack on mobile */}
+          <div className="flex flex-col md:flex-row flex-wrap">
             {data.labels.map((label, index) => (
-              <div key={index} className="flex items-center w-full md:w-1/2 mb-4"> {/* Adjusted width for mobile */}
+              <div key={index} className="flex items-center w-full md:w-1/2 mb-4">
                 <div
                   className="w-4 h-4 rounded-full mr-2"
-                  style={{ backgroundColor: data.datasets[0].backgroundColor[index] }}
+                  style={{
+                    backgroundColor: data.datasets[0].backgroundColor[index] as string,
+                  }}
                 />
                 <span className="text-gray-700">{label}</span>
               </div>

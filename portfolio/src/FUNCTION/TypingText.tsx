@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 
-const TypingText = ({ text }) => {
-  const [displayedText, setDisplayedText] = useState("");
-  const [index, setIndex] = useState(0);
-  const [isTyping, setIsTyping] = useState(true);
+interface TypingTextProps {
+  text: string;
+}
+
+const TypingText: React.FC<TypingTextProps> = ({ text = "" }) => {
+  const [displayedText, setDisplayedText] = useState<string>("");
+  const [index, setIndex] = useState<number>(0);
+  const [isTyping, setIsTyping] = useState<boolean>(true);
 
   useEffect(() => {
     const typingInterval = setInterval(() => {

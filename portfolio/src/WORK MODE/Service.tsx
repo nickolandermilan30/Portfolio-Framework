@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import Navbar from '../TOP/NavigationBar'; // Adjust the path if needed
+import { useState } from 'react';
+import Navbar from '../TOP/NavigationBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import '../SCSS/BS2.scss';
 import bookImage from '../assets/Project/book.png';
 import coffeetectImage from '../assets/Project/coffeetect.png';
 import rootFarmImage from '../assets/Project/Root Farm.jpg';
-import eunivateImage from '../assets/Project/Eunivate.png'; // New project image import
+import eunivateImage from '../assets/Project/Eunivate.png';
 
 // Update projects to include images
 const projects = [

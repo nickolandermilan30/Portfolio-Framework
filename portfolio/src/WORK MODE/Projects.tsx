@@ -1,8 +1,26 @@
-import React from 'react';
-import { FaMobileAlt, FaLaptop } from 'react-icons/fa'; // Import Font Awesome icons
+import { FaMobileAlt, FaLaptop } from 'react-icons/fa';
 
-// Accept props for dynamic data if needed (projectTitle, filteredProjects, handlers)
-const Projects = ({ projectTitle, filteredProjects, handleMobileClick, handleComputerClick, handleAllClick }) => {
+interface ProjectType {
+  image: string;
+  name: string;
+  link?: string;
+}
+
+interface ProjectsProps {
+  projectTitle: string;
+  filteredProjects: ProjectType[];
+  handleMobileClick: () => void;
+  handleComputerClick: () => void;
+  handleAllClick: () => void;
+}
+
+const Projects: React.FC<ProjectsProps> = ({
+  projectTitle,
+  filteredProjects,
+  handleMobileClick,
+  handleComputerClick,
+  handleAllClick,
+}) => {
   return (
     <div className="flex flex-col items-center mt-16">
       {/* Title section */}
@@ -11,7 +29,7 @@ const Projects = ({ projectTitle, filteredProjects, handleMobileClick, handleCom
           className="text-red-800 text-5xl text-center"
           style={{ fontFamily: '"Bebas Neue", sans-serif', fontWeight: 400 }}
         >
-          {projectTitle} {/* Dynamic project title */}
+          {projectTitle}
         </div>
       </div>
 
@@ -147,7 +165,7 @@ const Projects = ({ projectTitle, filteredProjects, handleMobileClick, handleCom
                 </div>
                 <div className="flex items-center mr-2">
                   <span className="w-2.5 h-2.5 bg-blue-600 rounded-full mr-1"></span>
-                  <span className="text-s">MERN</span>
+                  <span className="text-sm">MERN</span>
                 </div>
               </div>
             )}

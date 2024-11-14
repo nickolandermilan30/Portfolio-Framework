@@ -1,7 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link
+import { Link } from 'react-router-dom';
 
-const Navbar_WM = ({ darkMode }) => {
+interface NavbarProps {
+  darkMode: boolean;
+}
+
+const Navbar_WM: React.FC<NavbarProps> = ({ darkMode }) => {
   return (
     <div>
       <nav className="p-4">

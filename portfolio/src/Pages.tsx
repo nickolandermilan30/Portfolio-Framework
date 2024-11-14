@@ -4,16 +4,21 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Splashscreen from './PRELOADER/Splashscreen';
 import App from './TOP/StartPoint';
-import AboutUs from './WORK MODE/AboutMe'; // Import AboutUs
-import './CSS/index.css';
-import './CSS/transitions.css'; // Import your custom transitions CSS
-import Socials from './WORK MODE/Service'; // Import the Socials component
-import ProjCard from './WORK MODE/ProjectCard'; // Import the Socials component
+import AboutUs from './WORK MODE/AboutMe';
+import Socials from './WORK MODE/Service';
+import ProjCard from './WORK MODE/ProjectCard';
 import Art from './TOP/Art';
+import './CSS/index.css';
+import './CSS/Transition/transitions.css';
 
-const Main = () => {
+// Define prop types for Splashscreen component if it's expecting props
+interface SplashscreenProps {
+  onFinishLoading: () => void;
+}
+
+const Main: React.FC = () => {
   const [loading, setLoading] = useState(true);
-  const location = useLocation(); // Get the current location
+  const location = useLocation();
 
   const handleFinishLoading = () => {
     setLoading(false);
@@ -22,13 +27,13 @@ const Main = () => {
   return (
     <StrictMode>
       {loading ? (
-        <Splashscreen onFinishLoading={handleFinishLoading} />
+        <Splashscreen onFinishLoading={handleFinishLoading as SplashscreenProps['onFinishLoading']} />
       ) : (
-        <TransitionGroup>
-          <CSSTransition key={location.key} classNames="slide" timeout={300}>
+        <TransitionGroup component={null}>
+          <CSSTransition key={location.pathname} classNames="slide" timeout={300}>
             <Routes location={location}>
               <Route path="/" element={<App />} />
-              <Route path="/about" element={<AboutUs />} /> 
+              <Route path="/about" element={<AboutUs />} />
               <Route path="/socials" element={<Socials />} />
               <Route path="/ProjCard" element={<ProjCard />} />
               <Route path="/Art-page" element={<Art />} />
@@ -40,7 +45,6 @@ const Main = () => {
   );
 };
 
-// Ensure the root element is present before creating the root
 const rootElement = document.getElementById('root');
 if (rootElement) {
   createRoot(rootElement).render(

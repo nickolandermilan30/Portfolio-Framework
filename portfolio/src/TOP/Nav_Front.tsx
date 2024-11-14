@@ -4,10 +4,10 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import MusicDisk from '../assets/Images/Music_Disk.png';
 import aboutYouSong from '../assets/Song/about_you_song.mp3';
 
-function Nav_Front() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [audio] = useState(new Audio(aboutYouSong));
-  const [isPlaying, setIsPlaying] = useState(false);
+const Nav_Front: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [audio] = useState<HTMLAudioElement>(new Audio(aboutYouSong));
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   useEffect(() => {
     audio.preload = 'auto';
@@ -61,7 +61,7 @@ function Nav_Front() {
             </li>
             <li>
               <Link to="/Art-page" className="border-2 border-blue-800 text-blue-800 px-4 py-2 rounded-full hover:bg-blue-800 hover:text-white transition duration-400">
-              Arts
+                Arts
               </Link>
             </li>
             <li className="flex items-center">
@@ -69,7 +69,6 @@ function Nav_Front() {
                 About Me
               </Link>
 
-              {/* Button to play or stop music */}
               <button
                 className="w-40 h-11 border-2 bg-white shadow-xl rounded-full ml-5 flex items-center overflow-hidden hover:bg-blue-800 transition duration-300"
                 onClick={playMusic}
@@ -116,27 +115,25 @@ function Nav_Front() {
                 </Link>
               </li>
 
-        {/* Music button for mobile and desktop */}
-<button
-  className="w-full border-2 bg-white shadow-xl rounded-full flex items-center justify-start overflow-hidden hover:bg-blue-800 transition duration-300 mt-4 lg:mt-0 lg:ml-5"
-  onClick={playMusic}
->
-  <img
-    src={MusicDisk}
-    alt="Music Disk"
-    className={`w-10 h-10 rounded-full ml-1 ${isPlaying ? 'animate-spin' : ''}`}
-  />
-  <span className="ml-2 text-blue-800 text-sm hover:text-white hover:whitespace-nowrap">
-    {isPlaying ? "Stop Now" : "Play Now"}
-  </span>
-</button>
-
+              <button
+                className="w-full border-2 bg-white shadow-xl rounded-full flex items-center justify-start overflow-hidden hover:bg-blue-800 transition duration-300 mt-4 lg:mt-0 lg:ml-5"
+                onClick={playMusic}
+              >
+                <img
+                  src={MusicDisk}
+                  alt="Music Disk"
+                  className={`w-10 h-10 rounded-full ml-1 ${isPlaying ? 'animate-spin' : ''}`}
+                />
+                <span className="ml-2 text-blue-800 text-sm hover:text-white hover:whitespace-nowrap">
+                  {isPlaying ? "Stop Now" : "Play Now"}
+                </span>
+              </button>
             </ul>
           </div>
         </div>
       )}
     </div>
   );
-}
+};
 
 export default Nav_Front;
