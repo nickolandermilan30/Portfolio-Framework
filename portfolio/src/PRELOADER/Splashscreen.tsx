@@ -33,7 +33,7 @@ const Splashscreen: React.FC<SplashscreenProps> = ({ onFinishLoading }) => {
           <span className="splashscreen-falling" style={{ animationDelay: '0.8s' }}>O</span>
         </div>
       ) : showWelcome ? (
-        <div className="text-9xl text-white font-bold sliding-welcome">
+        <div className="font-bold text-white sliding-welcome text-7xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl">
           WELCOME
         </div>
       ) : null}

@@ -32,6 +32,10 @@ import Trad13 from '/src/assets/Traditional Art/Trad (13).jpg';
 import Trad14 from '/src/assets/Traditional Art/Trad (14).jpg';
 import Trad15 from '/src/assets/Traditional Art/Trad (15).jpg';
 
+// Import tool images
+import IbisPaint from '/src/assets/Tools/ibispaint.png';
+import MediBang from '/src/assets/Tools/medibang.png';
+
 interface Artwork {
   year: number;
   imageUrl: string;
@@ -116,7 +120,7 @@ const Art: React.FC = () => {
 
         <h2 className="text-4xl font-bold mb-6">My Arts</h2>
 
-        <div className="flex justify-center space-x-4 mb-10">
+        <div className="flex justify-center space-x-4 mb-4">
           <button
             onClick={() => handleSwitch('traditional')}
             className={`${
@@ -146,6 +150,12 @@ const Art: React.FC = () => {
               size="lg"
             />
           </button>
+        </div>
+
+        {/* Tool images container */}
+        <div className="flex justify-center items-center space-x-4 mb-10">
+          <img src={IbisPaint} alt="Ibis Paint" className="w-16 h-16 rounded-2xl shadow-xl md:w-20 md:h-20" />
+          <img src={MediBang} alt="MediBang" className="w-16 h-16 md:w-20 rounded-2xl shadow-xl md:h-20" />
         </div>
 
         <div className="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">

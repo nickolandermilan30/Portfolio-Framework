@@ -11,11 +11,23 @@ import Education from './Education';
 
 const AboutUs: React.FC = () => {
   const handleResumeClick = () => {
-    window.open('/src/assets/Files/Nickolander Resume.pdf', '_blank');
+    const resumeUrl = '/Nickolander Resume.pdf'; // Relative path in the public folder
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'Nickolander Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const handleCoverLetterClick = () => {
-    window.open('/src/assets/Files/Cover letter Nicko Lander R. Milan.pdf', '_blank');
+    const coverLetterUrl = '/Cover letter Nicko Lander R. Milan.pdf'; // Relative path in the public folder
+    const link = document.createElement('a');
+    link.href = coverLetterUrl;
+    link.download = 'Cover letter Nicko Lander R. Milan.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const handleSendGmailClick = () => {
