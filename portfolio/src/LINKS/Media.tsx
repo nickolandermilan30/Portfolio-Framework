@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { SiTiktok } from 'react-icons/si'; // Import TikTok icon from Simple Icons
 
