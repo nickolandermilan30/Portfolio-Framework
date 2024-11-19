@@ -38,6 +38,14 @@ const Education: React.FC = () => {
       <h2 className="text-4xl font-semibold text-center mb-8">Experience & Education</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         
+        {/* Additional Experience Item */}
+        <Item
+          icon={faBriefcase}
+          year="April 2024 - Sept 2024"
+          title="Freelance Graphic & Video Designer"
+          description="Designed banners and videos with SEO strategies for improved visibility. Created engaging video content using Canva and supported administrative tasks with client-focused outputs."
+        />
+
         {/* Experience Item */}
         <Item
           icon={faBriefcase}
@@ -62,15 +70,24 @@ const Education: React.FC = () => {
           description="Built a fully responsive website using React.js, Vite, Express.js, Tailwind CSS, and MongoDB. Implemented APIs, conducted manual testing, and resolved frontend, backend, and database issues."
         />
 
+        {/* Education Item with Subtitle */}
+        <Item
+          icon={faGraduationCap} 
+          year="Currently"
+          title="Web Development -"
+          subtitle="Learning"
+          description="I am studying web development to deepen my understanding of creating responsive and functional websites, enhance my technical skills, and effectively contribute to projects by utilizing modern frameworks and technologies, as demonstrated by my previous work experiences and educational background."
+        />
+
          {/* Education Item with Subtitle */}
          <Item
           icon={faGraduationCap} 
-          year="2024"
-          title="Web Development -"
+          year="Currently"
+          title="Android Development -"
           subtitle="Learning"
-          description="Graduated with a Bachelor’s degree in Information Technology, equipped with foundational and practical skills in software and web development."
+          description="studying application development to enhance my skills in creating innovative solutions, improve my career opportunities, and contribute to the growing demand for efficient and user-friendly digital applications."
         />
-        
+
       </div>
     </div>
   );
